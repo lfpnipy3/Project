@@ -1,0 +1,40 @@
+﻿<Page x:Class="Project.Frames.FoundationalPagesTables.SpecialtiesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project.Frames.FoundationalPagesTables"
+      mc:Ignorable="d" 
+      d:DesignHeight="749" 
+      d:DesignWidth="1360"
+      Background="Transparent"
+      Loaded="Page_Loaded">
+
+
+
+    <Grid Background="#393a41">
+
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="599*"/>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="Специальности"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"
+                   Foreground="#c2c3c6"
+                   FontFamily="Fonts/#gg sans Regular.ttf"
+                   FontSize="64"/>
+
+        <DataGrid Grid.Row="1"
+                  x:Name="DataGridGeneral">
+
+
+
+        </DataGrid>
+    </Grid>
+</Page>

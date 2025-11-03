@@ -1,0 +1,108 @@
+﻿<Window x:Class="Project.AuthWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project"
+        mc:Ignorable="d"
+        Height="740"
+        Width="1280"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        MouseLeftButtonDown="LeftBtnMousePositionWindow">
+
+    <Grid>
+        <Border CornerRadius="9"
+                Margin="15">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/BackgroundAvtorisahion.png" Stretch="UniformToFill"/>
+            </Border.Background>
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15"
+                                  Direction="-90"
+                                  RenderingBias="Quality"
+                                  ShadowDepth="2"/>
+            </Border.Effect>
+        </Border>
+
+        <UniformGrid Columns="3">
+            <Grid/>
+            <Grid Margin="-175,0,-175,0">
+                <Border Background="#393a41"
+                        CornerRadius="8"
+                        Margin="0,160,0,160"
+                        BorderThickness="1">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="15"
+                                          Direction="-90"
+                                          RenderingBias="Quality"
+                                          ShadowDepth="2"/>
+                    </Border.Effect>
+                    <Image Margin="541,44,54,194" Source="/Images/QR-codeAvtorisahion.png" Stretch="Fill" Width="180" Height="180"/>
+                </Border>
+
+                <TextBlock Text="С возвращением!"
+                           Margin="155,198,0,0"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top"
+                           FontFamily="Fonts/#gg sans Regular.ttf"
+                           FontWeight="Bold"
+                           FontSize="24"
+                           Foreground="White"/>
+
+                <TextBlock Text="Мы так рады видеть вас снова!"
+                           Margin="147,235,0,0"
+                           VerticalAlignment="Top"
+                           FontFamily="Fonts/#gg sans Regular.ttf"
+                           FontSize="16"
+                           Foreground="#c2c3c6"
+                           HorizontalAlignment="Left"/>
+
+                <TextBlock Text="Логин"
+                           Margin="46,274,307,436"
+                           FontSize="16"
+                           Foreground="White"
+                           FontFamily="Fonts/#gg sans Regular.ttf"/>
+
+                <TextBox Style="{DynamicResource TextBoxStyleAuthorizationRegistration}"
+                         Margin="46,304,307,390"
+                         x:Name="TextBoxLogin"/>
+
+                <TextBlock Text="Пароль"
+                           Margin="46,370,307,340"
+                           FontSize="16"
+                           Foreground="White"
+                           FontFamily="Fonts/#gg sans Regular.ttf"/>
+
+                <PasswordBox Style="{DynamicResource PasswordBoxStyleAuthorizationRegistration}"
+                             Margin="46,404,307,291"
+                             x:Name="TextBoxPassword"/>
+
+                <Button Style="{DynamicResource ButtonStyle}"
+                        Margin="46,484,307,210"
+                        Height="NaN"
+                        Content="Вход"
+                        FontWeight="Bold"
+                        Click="BtnAuthorization"
+                        IsDefault="true"
+                        FocusVisualStyle="{x:Null}"/>
+
+                <TextBlock Text="Войти с помощью QR-кода"
+                           TextWrapping="Wrap"
+                           Margin="523,393,0,0"
+                           FontFamily="Fonts/#gg sans Regular.ttf"
+                           FontWeight="Bold"
+                           FontSize="24"
+                           Foreground="White"
+                           Width="222"
+                           Height="75"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top"/>
+            </Grid>
+            <Grid/>
+        </UniformGrid>
+    </Grid>
+</Window>
